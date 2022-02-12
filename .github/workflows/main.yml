@@ -34,5 +34,5 @@ jobs:
     - name: bloop
       run: |
         #sbt bloopInstall
-        cs install bloop --only-prebuilt=true
+        cs install bloop:1.4.12 --only-prebuilt=true
         bloop test bloop-test -o FooTest -- -J-Dkey=Hello
