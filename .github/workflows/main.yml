@@ -25,8 +25,8 @@ jobs:
 
     - uses: coursier/setup-action@v1
       with:
-        jvm: adopt:11
-        apps: bloop
+        #jvm: adopt:11
+        #apps: bloop
 
     - name: sbt Pass
       run: sbt 'testOnly FooTester -- -Dkey=Hello'
@@ -34,4 +34,5 @@ jobs:
     - name: bloop
       run: |
         #sbt bloopInstall
+        cs install bloop --only-prebuilt=true
         bloop test bloop-test -o FooTest -- -J-Dkey=Hello
