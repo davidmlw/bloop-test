@@ -23,6 +23,10 @@ jobs:
         distribution: temurin
         java-version: 11
 
+    - uses: coursier/setup-action@v1
+      with:
+        apps: bloop
+
     - name: sbt Pass
       run: sbt 'testOnly FooTester -- -Dkey=Hello'
 
