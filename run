@@ -1,0 +1,4 @@
+sbt 'testOnly FooTester -- -Dkey=hello' ## Pass
+sbt 'testOnly FooTester'                ## expected fail
+sbt bloopInstall                        ## Install .bloop
+bloop test bloop-run -o FooTester -- -J-Dkey=Hello ## Fail
