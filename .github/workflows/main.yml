@@ -24,9 +24,8 @@ jobs:
         java-version: 11
 
     - uses: coursier/setup-action@v1
-      #with:
-        #jvm: adopt:11
-        #apps: bloop
+      with:
+        apps: bloop:1.4.12
 
     - name: sbt Pass
       run: sbt 'testOnly FooTester -- -Dkey=Hello'
