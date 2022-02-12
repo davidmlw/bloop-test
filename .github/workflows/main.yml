@@ -24,7 +24,7 @@ jobs:
         java-version: 11
 
     - uses: coursier/setup-action@v1
-      with:
+      #with:
         #jvm: adopt:11
         #apps: bloop
 
