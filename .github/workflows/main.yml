@@ -33,4 +33,4 @@ jobs:
     - name: bloop
       run: |
         sbt bloopInstall
-        bloop test foo -o FooTester --verbose -- -J-Dkey=Hello -J-Duser.key=Hellooooo
+        bloop test foo -o FooTester --verbose -- -Dkey=Hello -J-Dkey=Hello -J-Duser.key=Hellooooo
