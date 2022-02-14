@@ -25,7 +25,7 @@ jobs:
 
     - uses: coursier/setup-action@v1
       with:
-        apps: bloop:1.4.12
+        apps: bloop:1.4.0-RC1
 
     - name: sbt Pass
       run: sbt 'testOnly FooTester -- -Dkey=Hello -Duser.key=Hellooooo'
