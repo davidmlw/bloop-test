@@ -10,10 +10,13 @@ class FooTester extends AnyFreeSpec with BeforeAndAfterAllConfigMap{
   override def beforeAll(configMap: ConfigMap) {
 
 
-    println(System.getProperty("java.version"))
-    println(System.getProperty("java.runtime.version"))
-    println(System.getProperty("key"))
-    println(sys.env.get("key"))
+    println(s"java version: ${System.getProperty("java.version")}")
+    println(s"runtime version: ${System.getProperty("java.runtime.version")}")
+    println(s"user.dir: ${System.getProperty("user.dir")}")
+    println(s"user.key: ${System.getProperty("user.key")}")
+    println(s"key: ${System.getProperty("key")}")
+    println(s"env user.dir: ${sys.env.get("user.dir")}")
+    println(s"env key: ${sys.env.get("key")}")
 
     assume(configMap.isDefinedAt(key), "Config key: " + key)
     value = configMap.getRequired[String](key)

@@ -28,9 +28,9 @@ jobs:
         apps: bloop:1.4.12
 
     - name: sbt Pass
-      run: sbt 'testOnly FooTester -- -Dkey=Hello'
+      run: sbt 'testOnly FooTester -- -Dkey=Hello -Duser.key=Hellooooo'
 
     - name: bloop
       run: |
         sbt bloopInstall
-        bloop test foo -o FooTester --verbose -- -J-Dkey=Hello
+        bloop test foo -o FooTester --verbose -- -J-Dkey=Hello -J-Duser.key=Hellooooo
